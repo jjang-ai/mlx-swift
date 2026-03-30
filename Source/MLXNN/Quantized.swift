@@ -153,8 +153,8 @@ public func quantize(
 /// The same as ``Embedding`` but with a quantized weight matrix.
 open class QuantizedEmbedding: Embedding, Quantized {
 
-    public let groupSize: Int
-    public let bits: Int
+    public var groupSize: Int
+    public var bits: Int
 
     public let mode: QuantizationMode
     public let scales: MLXArray
@@ -237,8 +237,8 @@ open class QuantizedEmbedding: Embedding, Quantized {
 /// - ``QuantizedLinear/init(_:_:bias:groupSize:bits:mode:)``
 open class QuantizedLinear: Linear, Quantized {
 
-    public let groupSize: Int
-    public let bits: Int
+    public var groupSize: Int
+    public var bits: Int
 
     public let mode: QuantizationMode
     public let scales: MLXArray
